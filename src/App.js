@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// A component
+// This is a functional component
+// A function that returns html
+
+// when returning html, there must only be 1 parent element
+import FavouriteThings from "./FavouriteThings";
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FavouriteThings 
+        className='manny is cool'
+        style={{ 
+          backgroundColor: 'red'
+        }}
+        isCool={true}
+        randomProp // randomProp={true}
+        onClick= {()=> {console.log('clocked')}}
+        favThings= {['Food', 'Music', 'Video Games', 'Movies', 'Sleep']}
+        name= {'Lotrex'}
+      />
+
+      <FavouriteThings 
+        style={{ 
+          backgroundColor: 'red'
+        }}
+        onClick= {()=> {console.log('clocked')}}
+        favThings= {['Teemo', 'Bacon', 'Sleep', 'Climbing', 'Coding']}
+        name= {'Manny'}
+      />
     </div>
   );
 }
